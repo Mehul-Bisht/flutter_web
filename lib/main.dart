@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web/Views/Home/home.dart';
+import 'package:flutter_web/layout_template/layout_template.dart';
+import 'package:flutter_web/locator.dart';
 
 void main() {
+  setupLocator();
   runApp(MyApp());
 }
 
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
               .apply(
               fontFamily: 'Open Sans'),
         ),
-        home: Home(),
+        home: LayoutTemplate(),
     );
   }
 }

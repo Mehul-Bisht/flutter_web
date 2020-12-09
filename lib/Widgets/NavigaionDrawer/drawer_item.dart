@@ -5,8 +5,9 @@ class DrawerItem extends StatelessWidget {
 
   final String title;
   final IconData icon;
+  final String navigationPath;
 
-  const DrawerItem({Key key, this.title, this.icon}) : super(key: key);
+  const DrawerItem({Key key, this.title, this.icon, this.navigationPath}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class DrawerItem extends StatelessWidget {
           SizedBox(
             width: 30,
           ),
-          NavBarItem(title: title,),
+          NavBarItem(title: title,navigationPath: navigationPath,),
         ],
       ),
     );
